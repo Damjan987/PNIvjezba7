@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    
+
+{% block body_block %}
+
+<div class="jumbotron">
+    <h1>Welcome to the Movie Detail Page!</h1>
+    <h2>Movie details:</h2>
+    <p>Name: {{projection_detail.film_name}}</p>
+    <p>Duration: {{projection_detail.film_duration}}</p>
+    <p>Capacity: {{projection_detail.film_capacity}}</p>
+</div>
+
+<hr>
+
+{% for card in projection_detail.cards.all %}
+    <p>{{card.user}} je kupio kartu broj {{card.seat_number}}.</p>
+{% endfor %}
+
+{% endblock %}
+
+</body>
+</html>

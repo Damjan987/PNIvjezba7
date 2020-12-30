@@ -1,0 +1,12 @@
+{% extends "vjezba7app/vjezba7app_base.html"%}
+
+{% block body_block %}
+
+<h1>Welcome to the list of all movies!</h1>
+    <ol>
+        {% for projection in projections %}
+            <h2><li><a href="{{projection.id}}">{{ projection.film_name }}</a></li></h2>
+        {% endfor %}
+    </ol>
+    
+{% endblock %}
